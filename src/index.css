@@ -1,10 +1,12 @@
+/* Google Fonts - MUST be first */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap');
-@import "tailwindcss";
 
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-
-
-
+/* Root variables */
 :root {
   --primary: #6366f1;
   --primary-dark: #4f46e5;
@@ -22,12 +24,14 @@
   --sidebar-w: 240px;
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body */
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
@@ -35,14 +39,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Headings */
 h1, h2, h3, h4, h5 {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 99px; }
 
+/* Sidebar */
 .sidebar-link {
   display: flex;
   align-items: center;
@@ -59,6 +66,7 @@ h1, h2, h3, h4, h5 {
 .sidebar-link:hover { background: var(--surface2); color: var(--text); }
 .sidebar-link.active { background: var(--primary-light); color: var(--primary); }
 
+/* Buttons */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -93,6 +101,7 @@ h1, h2, h3, h4, h5 {
 }
 .btn-ghost:hover { background: var(--surface2); color: var(--text); }
 
+/* Card */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -100,6 +109,7 @@ h1, h2, h3, h4, h5 {
   padding: 20px;
 }
 
+/* Input */
 .input-field {
   width: 100%;
   padding: 10px 14px;
@@ -117,6 +127,7 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
 }
 
+/* Badges */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -133,6 +144,7 @@ h1, h2, h3, h4, h5 {
 .badge-red { background: #fee2e2; color: #dc2626; }
 .badge-gray { background: #f3f4f6; color: #6b7280; }
 
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
